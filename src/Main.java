@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -70,9 +72,9 @@ public class Main {
         double salary = 29_000;
         double totalSalary = 0;
 
-        for (int i = 1; i <= 12; i++) {
+        for (int month = 1; month <= 12; month++) {
             totalSalary += salary;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + totalSalary + " рублей");
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalSalary + " рублей");
         }
 
         //Task 9
@@ -82,17 +84,16 @@ public class Main {
         totalSalary = 0;
 
         for (int i = 1; i <= 12; i++) {
-            totalSalary += totalSalary / 100;
             totalSalary += salary;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + totalSalary + " рублей");
+            totalSalary += totalSalary / 100;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + String.format("%.2f", totalSalary) + " рублей");
         }
 
         //Task 10
         System.out.println("Task 10");
 
         for (int i = 1; i <= 10; i++) {
-            int multByTwo = i * 2;
-            System.out.println("2*" + i + "=" + multByTwo);
+            System.out.printf("%d * %d = %d%n", 2, i, 2 * i);
         }
     }
 }
